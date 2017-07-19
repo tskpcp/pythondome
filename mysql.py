@@ -5,13 +5,11 @@ def mysqldome():
     connection=pymysql.connect(host='192.168.1.249',
                                port=3306,
                                user='root',
-                               password='root',
-                               db='weixin_platform',
-                               charset='utf8',)
-
+                               password='root',)
     cur=connection.cursor()
-
-    sql="select * from weixin_users"
+    connection.set_charset("utf8")
+    connection.select_db("pythontest")
+    sql="select * from cms_admin_mst"
 
     cur.execute(sql)
     # 获取剩余结果的第一行数据
@@ -21,7 +19,10 @@ def mysqldome():
     # 获取剩余结果所有数据
     rows=cur.fetchall()
     for dr in rows:
-        print(dr)
+        print("fetchall"+dr)
+
+
+
 
     cur.close()
     connection.close()

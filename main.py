@@ -1,8 +1,9 @@
 if __name__=='__main__':
     import random
     import sort
-    import test
-    import mysql
+
+
+
 
     # a=random.sample(range(100),10)
     #
@@ -12,17 +13,36 @@ if __name__=='__main__':
     # print("冒泡排序=", sort.bubble_sort(a))
     # print("直接插入排序=", sort.direct_insertion_sort(a))
     # print("希尔排序=", sort.shell_sort(a))
-
+    import test
     # print(test.pySum())
     # print(test.npSum())
+    import mysql
+   # print(mysql.mysqldome())
 
-    print(mysql.mysqldome())
+    from mysqldbHelper import *
+
+    helper=mySqlDBHelper('192.168.1.249',3306,'root','root','utf8')
+    helper.setDB("pythontest")
+    # 查询
+    sql = "select * from cms_admin_mst"
+    rows = helper.queryAll(sql)
+    for row in rows:
+        print(row['LOGIN_ID'], row['USER_NAME'],row['POSITION'],row['MARK'])
+   #添加
+   #dataSource={"LOGIN_ID":"2","PASSWORD":"123456","USER_NAME":"我们"}
+   #helper.insert("cms_admin_mst",dataSource)
+   #print(helper.getLastInsertRowId())
+    #修改
+    #pData={"POSITION":"uPDATE","MARK":"3"}
+    #whereData={"LOGIN_ID":"2"}
+    #helper.update("cms_admin_mst",pData,whereData)
+
 
 #【永无休止】Python数据分析（六）：通用函数，快速的元素级数组函数
 #http://www.toutiao.com/a6399931270432588034/?iid=7739938160&app=news_article
 
 # http: // blog.csdn.net / qq_33528613 / article / category / 6902810 / 3
-
+#http: // blog.csdn.net / work201003 / article / category / 6047021
 #【达人科技】Python 3 集合基础和概念!
 #https://www.baidu.com/s?ie=utf8&oe=utf8&wd=%E3%80%90%E8%BE%BE%E4%BA%BA%E7%A7%91%E6%8A%80%E3%80%91Python%203%20%E9%9B%86%E5%90%88%E5%9F%BA%E7%A1%80%E5%92%8C%E6%A6%82%E5%BF%B5%EF%BC%81&tn=98010089_dg&ch=3
 #【博客园】Python自动化开发(三):循环次数控制、常用数据类型、字符串格式化、列
@@ -33,3 +53,7 @@ if __name__=='__main__':
 #http://www.cnblogs.com/woider/p/5926744.html
 #http://www.cnblogs.com/wt11/p/6141225.html
 #http://www.jb51.net/article/92516.htm
+
+#读取excel
+    #http://www.jb51.net/article/77626.htm
+#导出excel
