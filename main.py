@@ -5,18 +5,18 @@ if __name__=='__main__':
 
 
 
-    # a=random.sample(range(100),10)
+    a=random.sample(range(100),10)
     #
     # print("a=",a)
     #
-    # print("归并排序=",sort.merge_sort(a))
+    print("归并排序=",sort.merge_sort(a))
     # print("冒泡排序=", sort.bubble_sort(a))
     # print("直接插入排序=", sort.direct_insertion_sort(a))
     # print("希尔排序=", sort.shell_sort(a))
-    import numpy_test
+   # import numpy_test
     # print(test.pySum())
     # print(test.npSum())
-    import mysql
+   # import mysql
    # print(mysql.mysqldome())
 
     # from mysqldbHelper import *
