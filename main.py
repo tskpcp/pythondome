@@ -7,12 +7,14 @@ if __name__=='__main__':
 
     a=random.sample(range(100),10)
     #
-    # print("a=",a)
+    print("a=",a)
     #
-    print("归并排序=",sort.merge_sort(a))
+    #print("归并排序=",sort.merge_sort(a))
     # print("冒泡排序=", sort.bubble_sort(a))
-    # print("直接插入排序=", sort.direct_insertion_sort(a))
-    # print("希尔排序=", sort.shell_sort(a))
+    print("直接插入排序=", sort.direct_insertion_sort(a))
+    print("希尔排序=", sort.shell_sort(a))
+    #print("二分发",sort.BinarySearch([a],3))
+    print("快速排序",sort.quick_sort(a,0,len(a)-1))
    # import numpy_test
     # print(test.pySum())
     # print(test.npSum())
@@ -41,8 +43,33 @@ if __name__=='__main__':
     # html=getHtml.gethtml("http://www.toutiao.com/a6421022940322513153/?iid=11431899230&app=news_article")
     # print(html)
 
-    import test
-    test.test()
+    #import test
+    #test.test()
+
+
+    import graph
+
+    g=graph.Graph()
+    g.add_nodes([i+1 for i in range(8)])
+    g.add_edge((1, 2))
+    g.add_edge((1, 3))
+    g.add_edge((2, 4))
+    g.add_edge((2, 5))
+    g.add_edge((4, 8))
+    g.add_edge((5, 8))
+    g.add_edge((3, 6))
+    g.add_edge((3, 7))
+    g.add_edge((6, 7))
+    print("nodes:", g.nodes())
+    #广度优先搜索算法
+    order = g.breadth_first_search(1)
+    # 深度优先搜索算法
+    order = g.depth_first_search(1)
+
+
+   # 随笔分类 - python
+    #http: // www.cnblogs.com / yupeng / category / 521124. html
+
 #【永无休止】Python数据分析（六）：通用函数，快速的元素级数组函数
 #http://www.toutiao.com/a6399931270432588034/?iid=7739938160&app=news_article
 
