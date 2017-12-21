@@ -66,7 +66,12 @@ if __name__=='__main__':
     # 深度优先搜索算法
     order = g.depth_first_search(1)
 
-
+    #python数据结构之图深度优先和广度优先实例详解
+    #http: // www.jb51.net / article / 69145.htm
+    #Python 广度优先 / 深度优先遍历二叉树
+    #http: // www.jianshu.com / p / 7d665f3c01bc
+   # 二、基本算法之DFS、BFS和A *
+   # http: // blog.csdn.net / moodytong / article / details / 7651801
    # 随笔分类 - python
     #http: // www.cnblogs.com / yupeng / category / 521124. html
 
