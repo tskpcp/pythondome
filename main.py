@@ -13,6 +13,7 @@ if __name__=='__main__':
     # print("冒泡排序=", sort.bubble_sort(a))
     # print("直接插入排序=", sort.direct_insertion_sort(a))
     # print("希尔排序=", sort.shell_sort(a))
+
    # import numpy_test
     # print(test.pySum())
     # print(test.npSum())
@@ -72,3 +73,10 @@ if __name__=='__main__':
 #http://www.jb51.net/article/67270.htm
 #自己使用总结Python程序代码片段
 #http://www.jb51.net/article/67118.htm
+
+
+import datetime
+d1=datetime.datetime(2017,10,23)
+d2=datetime.datetime(2017,12,10)
+print((d2-d1).days)
+
