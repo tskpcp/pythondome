@@ -1,9 +1,6 @@
 if __name__=='__main__':
     import random
-    import sort
-
-
-
+    from finish import sort
 
     a=random.sample(range(100),10)
     #
@@ -14,7 +11,7 @@ if __name__=='__main__':
     print("直接插入排序=", sort.direct_insertion_sort(a))
     print("希尔排序=", sort.shell_sort(a))
     #print("二分发",sort.BinarySearch([a],3))
-    print("快速排序",sort.quick_sort(a,0,len(a)-1))
+    print("快速排序", sort.quick_sort(a, 0, len(a) - 1))
    # import numpy_test
     # print(test.pySum())
     # print(test.npSum())
@@ -47,9 +44,9 @@ if __name__=='__main__':
     #test.test()
 
 
-    import graph
+    from developing import graph
 
-    g=graph.Graph()
+    g= graph.Graph()
     g.add_nodes([i+1 for i in range(8)])
     g.add_edge((1, 2))
     g.add_edge((1, 3))
@@ -104,10 +101,3 @@ if __name__=='__main__':
 #http://www.jb51.net/article/67270.htm
 #自己使用总结Python程序代码片段
 #http://www.jb51.net/article/67118.htm
-
-
-import datetime
-d1=datetime.datetime(2017,10,23)
-d2=datetime.datetime(2017,12,10)
-print((d2-d1).days)
-
