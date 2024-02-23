@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+抽奖功能
+{{hro}}<br/>
+<a href="/choujiang">随机抽奖</a><br/>
+抽中了{{h}}<br/>
+------------------------------------------<br/>
+
+点赞功能<br/>
+<table>
+    <tr>
+        <td>id</td>
+         <td>名字</td>
+         <td>点赞数</td>
+         <td>操作</td>
+    </tr>
+    {% for i in data %}
+    <tr>
+      <td>{{i.id}}</td>
+    <td>{{i.name}}</td>
+    <td>{{i.num}}</td>
+    <td><a href="/dianzan?id={{i.id}}">点赞</a></td>
+        </tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>
